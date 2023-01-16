@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Elpiven</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script src="http://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/iso-blanco.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/icons/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/icons/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="sobre-mi.html" class="nav__link">Sobre mi</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="servicios.html" class="nav__link">Servicios</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link"><img class="nav__logo" src="img/iso-rojo.png" alt="logo"></a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="portfolio.html" class="nav__link">Portfolio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacto.html" class="nav__link nav__rojo">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="contacto">
+                <div class="contacto__container">
+                    <div class="contacto__texto">
+                        <h2 class="contacto__titulo">¿Trabajamos juntos?</h2>
+                        <p class="contacto__subtitulo">Estoy encantado de que hayas visitado mi sitio web y espero que hayas encontrado la información que buscabas. Si tienes alguna pregunta, comentario o sugerencia, estamos a tu disposición.</p>
+                        <div class="contacto__descripcion">
+                            <article class="contacto__iconos-container">
+                                <img class="contacto__iconos-img" src="img/icons/lugar.png" alt="lugar">
+                                <p class="contacto__iconos-texto">Valencia</p>
+                            </article>
+                            <article class="contacto__iconos-container">
+                                <img class="contacto__iconos-img" src="img/icons/movil.png" alt="movil">
+                                <p class="contacto__iconos-texto">648564522</p>
+                            </article >
+                            <article class="contacto__iconos-container">
+                                <img class="contacto__iconos-img" src="img/icons/correo.png" alt="correo">
+                                <p class="contacto__iconos-texto">3lpiven@gmail.com</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="contacto__imagen"><img src="img/mapa-valencia.JPG" alt="contacto"></div>
+                </div>
+            </section>
+            <!-- Contacto  -->
+            <section class="form">
+                <div class="form__container">
+                    <h2 class="form__titulo">Contacto</h2>
+                    <form
+
+                            action="https://formspree.io/f/mlekrekq"
+                            method="POST"
+                            class="form__container-form"
+                    >
+                        <label class="form__label">
+                            <span class="form__texto">Nombre_</span>
+                            <input class="form__input" type="text" name="nombre">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__texto">Correo_</span>
+                            <input class="form__input" type="email" name="email">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__texto">Teléfono_</span>
+                            <input class="form__input" type="number" name="telefono">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__texto">Cuéntame más sobre de tu proyecto_</span>
+                            <textarea class="form__input" name="message"></textarea>
+                        </label>
+                        <button class="button form__enviar" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="img/logotipo.png" alt="logotipo">
+                <p class="footer__logo-texto">Todos los derechos reservados</p>
+            </div>
+            <div class="footer__paginas">
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Inicio</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Sobre mí</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="index.html" class="footer__paginas-link">Servicios</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="portfolio.html" class="footer__paginas-link">Portfolio</a>
+                </li>
+                <li class="footer_item">
+                    <a href="#" class="footer__paginas-link">Contacto</a>
+                </li>
+            </div>
+            <div class="footer__contacto">
+                <p class="footer__contacto-titulo">Contacto</p>
+                <p class="footer__contacto-texto">Tlf: 648564522</p>
+                <p class="footer__contacto-texto">E-mail: 3lpiven@gmail.com</p>
+            </div>
+            <div class="footer__redes">
+                <p class="footer__redes-titulo">Redes</p>
+                <a href="https://www.instagram.com/3lpiven/"><img class="footer__redes-enlace" src="img/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/esteban-domene-blanes-1b77151a4/"><img class="footer__redes-enlace" src="img/icons/linkedin.svg" alt="Linkedin"></a>
+                <a href="#"><img class="footer__redes-enlace" src="img/icons/behance.svg" alt="Behance"></a>
+            </div>
+        </footer>
+    </body>
+</html>

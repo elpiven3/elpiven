@@ -1,0 +1,76 @@
+
+.titulo
+  max-width: 80vw
+  margin: 0 auto
+  padding: 1rem
+  &__portada
+    display: flex
+    justify-content: center
+  &__texto
+    font-family: "principal"
+    font-size: 3rem
+  &__linea
+
+
+.menu
+  &__ul
+    display: flex
+    justify-content: space-around
+    align-items: center
+  &__item
+    list-style: none
+    margin: 0
+    padding: 0
+    font-family: "secundaria"
+  &__link
+    text-decoration: none
+    color: white
+    font-family: "secundaria"
+
+
+.gallery
+  max-width: 80vw
+  margin: 0 auto
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 2rem
+  transition: .3s
+  border-top: 3px solid white
+  &:hover &__image
+    filter: grayscale(1)
+  &__column
+    display: flex
+    flex-direction: column
+    width: 33%
+  &__link
+    margin: 2px
+    overflow: hidden
+    &:hover
+      .gallery__image
+        filter: grayscale(0)
+      .gallery__caption
+        opacity: 1
+  &__thumb
+    margin: 0
+    padding: 1.5rem
+    position: relative
+  &__image
+    display: block
+    width: 100%
+    transition: .3s
+    &:hover
+      transform: scale(1.1)
+  &__caption
+    text-align: center
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 25px 0 15px
+    width: 100%
+    font-family: "principal"
+    font-size: 15px
+    color: white
+    opacity: 0
+    background: linear-gradient(0deg, rgb(207, 17, 29) 0%, rgba(255, 0, 0, 0) 100%)
+    transition: .3s

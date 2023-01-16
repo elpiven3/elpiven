@@ -1,0 +1,59 @@
+.header
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  transition: .4s
+  z-index: 100
+  font-family: "principal"
+  background: #0e0e0e
+  border-bottom: 2px solid #dadada
+  .container
+    width: 80vw
+    margin: 0 auto
+    padding: 1rem
+  &--background
+    background: #0e0e0e
+    border-bottom: 2px solid #333333
+  &__logo
+    display: none
+    width: 6rem
+  &__open
+    display: none
+  &__close
+    display: none
+  .container
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .nav
+      &__ul
+        display: flex
+        align-items: center
+        justify-content: space-around
+        gap: 3rem
+      &__link
+        font-family: "principal"
+        letter-spacing: 2px
+        text-align: center
+        font-size: 1.3rem
+        text-transform: uppercase
+        color: white
+        transition: .2s
+        &:hover
+          border-bottom: 4px solid #ffffff
+        &-logo
+          &:hover
+            border: none
+      &__rojo
+        color: #d1111c
+      &__container-button
+        display: none
+      &__container-links
+        display: flex
+        justify-content: center
+        align-items: center
+      &__logo
+        width: 7rem
+        margin-top: 3px

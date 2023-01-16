@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Elpiven</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script src="http://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/iso-blanco.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/icons/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/icons/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="sobre-mi.html" class="nav__link">Sobre mi</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="servicios.html" class="nav__link nav__rojo">Servicios</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link nav__link-logo"><img class="nav__logo" src="img/iso-rojo.png" alt="logo"></a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="portfolio.html" class="nav__link">Portfolio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacto.html" class="nav__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="landing" id="inicio">
+                <h1 class="landing__titulo">Servicios</h1>
+                <p class="landing__texto">¿Qué es lo que hago?</p>
+            </section>
+            <section class="servicios">
+                <div class="servicios__container">
+                    <article class="servicios__apartado servicios__movil">
+                        <div class="servicios__texto">
+                            <h3 class="servicios__titulo">Diseño Gráfico</h3>
+                            <ul class="servicios__descripcion">
+                                <li><strong class="servicios__descripcion-mayus">_Diseño de logotipos:</strong> Creación de logotipos y marcas corporativas que ayuden a las empresas a identificarse y diferenciarse en su industria.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Identidad corporativas:</strong> Creación de un conjunto de elementos visuales, como tarjetas de visita, papelería y uniformes, para ayudar a las empresas a proyectar una imagen coherente y profesional.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Publicidad:</strong> Creación de carteles, folletos y revistas, redes y cualquier otra pieza publicitaria que ayude a promover un producto o servicio.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Packaging:</strong> Creación de diseños para envases y embalajes de productos, incluyendo la creación de etiquetas y diseños de cajas.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Rediseños de marca:</strong> Reconstrucción de una identidad coorporativa para modernizar y darle otro enfoque sin perder la esencia de la marca.</li>
+                            </ul>
+                        </div>
+                        <div class="servicios__imagen"><img src="img/carousel/diseño-estatua.png" alt="" class="servicios__imagen-img"></div>
+                    </article>
+                    <article class="servicios__apartado">
+                        <div class="servicios__imagen"><img src="img/carousel/web.png" alt="" class="servicios__imagen-img"></div>
+                        <div class="servicios__texto">
+                            <h3 class="servicios__titulo">Diseño Web</h3>
+                            <ul class="servicios__descripcion">
+                                <li><strong class="servicios__descripcion-mayus">_Desarrollo web:</strong> Programación y codificación del sitio web utilizando lenguajes de programación como HTML, CSS, JavaScript y otros.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Integración de contenido:</strong> Integración de diferentes tipos de contenido, como imágenes, videos y audio, en el sitio web.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Diseño de Interfaz:</strong> Creación de una experiencia de usuario atractiva y fácil de usar a través del diseño de la interfaz del usuario, navegación y estructura del sitio web.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Worpress:</strong> Creación de páginas web</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="servicios__apartado">
+                        <div class="servicios__texto">
+                            <h3 class="servicios__titulo">Audiovisuales</h3>
+                            <ul class="servicios__descripcion">
+                                <li><strong class="servicios__descripcion-mayus">_Producción de video:</strong> Creación de videos para diferentes plataformas y formatos, como publicidad, videoclips, documentales, entre otros.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Edición de video:</strong> Proceso de corte, enmarcado y montaje de las tomas de video para crear un producto final.</li>
+                                <li><strong class="servicios__descripcion-mayus">_Post-producción de video:</strong> Proceso de agregar efectos visuales, sonidos y música a una producción de video.</li>
+                            </ul>
+                        </div>
+                        <div class="servicios__imagen"><img src="img/carousel/audiovisual.png" alt="" class="servicios__imagen-img"></div>
+                    </article>
+                </div>
+            </section>
+            <!-- Volver a inicio-->
+            <section>
+                <div class="volver">
+                    <div class="volver__linea"></div>
+                    <a href="#inicio" class="volver__flecha"><img src="img/icons/flecha.png" alt="volver" class="volver__flecha-imagen"></a>
+                    <div class="volver__linea"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="img/logotipo.png" alt="logotipo">
+                <p class="footer__logo-texto">Todos los derechos reservados</p>
+            </div>
+            <div class="footer__paginas">
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Inicio</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Sobre mí</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="index.html" class="footer__paginas-link">Servicios</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="portfolio.html" class="footer__paginas-link">Portfolio</a>
+                </li>
+                <li class="footer_item">
+                    <a href="#" class="footer__paginas-link">Contacto</a>
+                </li>
+            </div>
+            <div class="footer__contacto">
+                <p class="footer__contacto-titulo">Contacto</p>
+                <p class="footer__contacto-texto">Tlf: 648564522</p>
+                <p class="footer__contacto-texto">E-mail: 3lpiven@gmail.com</p>
+            </div>
+            <div class="footer__redes">
+                <p class="footer__redes-titulo">Redes</p>
+                <a href="https://www.instagram.com/3lpiven/"><img class="footer__redes-enlace" src="img/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/esteban-domene-blanes-1b77151a4/"><img class="footer__redes-enlace" src="img/icons/linkedin.svg" alt="Linkedin"></a>
+                <a href="#"><img class="footer__redes-enlace" src="img/icons/behance.svg" alt="Behance"></a>
+            </div>
+        </footer>
+    </body>
+</html>

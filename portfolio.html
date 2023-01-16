@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Elpiven</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script src="http://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/iso-blanco.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/icons/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/icons/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="sobre-mi.html" class="nav__link">Sobre mi</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="servicios.html" class="nav__link">Servicios</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link"><img class="nav__logo" src="img/iso-rojo.png" alt="logo"></a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="portfolio.html" class="nav__link nav__rojo">Portfolio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacto.html" class="nav__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="titulo">
+                <div class="titulo__portada">
+                    <h2 class="titulo__texto">Proyectos</h2>
+                </div>
+                <div class="menu">
+                    <span class="menu__linea"></span>
+                    <ul class="menu__ul">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Todo</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Diseño gráfico</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Diseño web</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Audiovisual</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Identidad corporativa</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Social media</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+                <div class="gallery">
+                    <div class="gallery__column">
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-1.jpg" alt="Nike" class="gallery__image">
+                                <figcaption class="gallery__caption">Carteleria Publicidad</figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-2.jpg" alt="Summer party" class="gallery__image">
+                                <figcaption class="gallery__caption">Cartelaria eventos</figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-3.jpg" alt="Alone" class="gallery__image">
+                                <figcaption class="gallery__caption">Cartelaria Abstracta</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="gallery__column">
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-4.jpg" alt="Shoko" class="gallery__image">
+                                <figcaption class="gallery__caption">Logo Shoko</figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="https://github.com/elpiven3?tab=repositories" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-5.jpg" alt="Github" class="gallery__image">
+                                <figcaption class="gallery__caption">GitHub</figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-6.jpg" alt="Giselle" class="gallery__image">
+                                <figcaption class="gallery__caption">Carteleria Eventos</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <div class="gallery__column">
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-7.jpg" alt="Patron folleto" class="gallery__image">
+                                <figcaption class="gallery__caption">Folleto Restaurante</figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=ivAHTNpPY1I" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-8.jpg" alt="Video Peaky Blinders" class="gallery__image">
+                                <figcaption class="gallery__caption">Edit Peaky Blinders</figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="#" target="_blank" class="gallery__link">
+                            <figure class="gallery__thumb">
+                                <img src="img/portfolio/portfolio-9.jpg" alt="Packaging" class="gallery__image">
+                                <figcaption class="gallery__caption">Packaging Puré</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="img/logotipo.png" alt="logotipo">
+                <p class="footer__logo-texto">Todos los derechos reservados</p>
+            </div>
+            <div class="footer__paginas">
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Inicio</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Sobre mí</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="index.html" class="footer__paginas-link">Servicios</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="portfolio.html" class="footer__paginas-link">Portfolio</a>
+                </li>
+                <li class="footer_item">
+                    <a href="#" class="footer__paginas-link">Contacto</a>
+                </li>
+            </div>
+            <div class="footer__contacto">
+                <p class="footer__contacto-titulo">Contacto</p>
+                <p class="footer__contacto-texto">Tlf: 648564522</p>
+                <p class="footer__contacto-texto">E-mail: 3lpiven@gmail.com</p>
+            </div>
+            <div class="footer__redes">
+                <p class="footer__redes-titulo">Redes</p>
+                <a href="https://www.instagram.com/3lpiven/"><img class="footer__redes-enlace" src="img/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/esteban-domene-blanes-1b77151a4/"><img class="footer__redes-enlace" src="img/icons/linkedin.svg" alt="Linkedin"></a>
+                <a href="#"><img class="footer__redes-enlace" src="img/icons/behance.svg" alt="Behance"></a>
+            </div>
+        </footer>
+    </body>
+</html>

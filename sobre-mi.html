@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Elpiven</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script src="http://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/iso-blanco.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/icons/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/icons/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="sobre-mi.html" class="nav__link nav__rojo">Sobre mi</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="servicios.html" class="nav__link">Servicios</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link"><img class="nav__logo" src="img/iso-rojo.png" alt="logo"></a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="portfolio.html" class="nav__link">Portfolio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacto.html" class="nav__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="sobremi">
+                <div class="sobremi__container" id="inicio">
+                    <h2 class="sobremi__titulo">
+                        ¡Hola!
+                    </h2>
+                    <img class="sobremi__img" src="img/foto-perfil.png" alt="foto personal">
+                    <p class="sobremi__texto">
+                        Bienvenidos a mi historia. <br><br>
+                        Todo comienza cuando vine a Valencia a estudiar Animación 3D, juegos y entornos interactivos, donde conocí el mundo de las artes gráficas y la comunicación audiovisual. En ese momento encontré una manera de expresar mi creatividad de forma profesional y encontrar lo que a día de hoy me apasiona.
+                            <br><br>
+                        Tras acabar mis estudios dio comienzo mi entrada al mundo laboral en este sector, donde realice varios proyectos como la creación de varios videos publicitarios, Motion Graphics, diseño de cartelería y maquetación.
+                            <br><br>
+                        Después dos años, decidí seguir creciendo y formarme de manera más profesional mediante un máster en Diseño Gráfico y Diseño web. Durante esta época he aprendido todo lo esencial y me he llevado muy buenas experiencias de gente profesional.
+                        <br><br>
+                        [Próximamente...]
+                    </p>
+                </div>
+            </section>
+            <section class="recorrido">
+                <div class="recorrido__titulo">
+                    <span class="recorrido__titulo-linea"></span>
+                    <h3 class="recorrido__titulo-texto">Recorrido</h3>
+                </div>
+                <article class="recorrido__texto">
+                    <p class="recorrido__texto-fecha">2016/2018</p>
+                    <div class="recorrido__texto-titulo">
+                        <p class="recorrido__texto-titulo-empresa">
+                            Animación 3D, juegos y entornos interactivos
+                        </p>
+                        <p class="recorrido__texto-titulo-lugar">
+                            Grado Superior
+                        </p>
+                    </div>
+                </article>
+                <article class="recorrido__texto">
+                    <p class="recorrido__texto-fecha">2018/2020</p>
+                    <div class="recorrido__texto-titulo">
+                        <p class="recorrido__texto-titulo-empresa">
+                            Pentec / Samoo e-learning
+                        </p>
+                        <p class="recorrido__texto-titulo-lugar">
+                            Empresa
+                        </p>
+                    </div>
+                </article>
+                <article class="recorrido__texto">
+                    <p class="recorrido__texto-fecha">2021/2022</p>
+                    <div class="recorrido__texto-titulo">
+                        <p class="recorrido__texto-titulo-empresa">
+                            Máster Diseño Gráfico y Web
+                        </p>
+                        <p class="recorrido__texto-titulo-lugar">
+                            Máster Idecrea
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <section class="programas">
+                <h3 class="programas__titulo">Programas</h3>
+                <div class="programas__container">
+                    <article class="programas__item">
+                        <img src="img/icons/photoshop.png" alt="icono" class="programas__iconos">
+                        <p class="programas__item-titulo">Photoshop</p>
+                    </article>
+                    <article class="programas__item">
+                        <img src="img/icons/after-effects.png" alt="icono" class="programas__iconos">
+                        <p class="programas__item-titulo">After Effects</p>
+                    </article>
+                    <article class="programas__item">
+                        <img src="img/icons/ilustrator.png" alt="icono" class="programas__iconos">
+                        <p class="programas__item-titulo">Illustrator</p>
+                    </article>
+                    <article class="programas__item">
+                        <img src="img/icons/indesing.png" alt="icono" class="programas__iconos">
+                        <p class="programas__item-titulo">Indesing</p>
+                    </article>
+                    <article class="programas__item">
+                        <img src="img/icons/premiere.png" alt="icono" class="programas__iconos">
+                        <p class="programas__item-titulo">Premiere</p>
+                    </article>
+                    <article class="programas__item">
+                        <img src="img/icons/wordpress.png" alt="icono" class="programas__iconos">
+                        <p class="programas__item-titulo">Wordpress</p>
+                    </article>
+                </div>
+            </section>
+            <section class="recordatorio">
+                <div class="recordatorio__container">
+                    <button class="recordatorio__button">
+                        <a class="recordatorio__button-link" href="servicios.html">Todos los servicios</a>
+                    </button>
+                    <button class="recordatorio__button">
+                        <a class="recordatorio__button-link" href="portfolio.html">Mira mis proyectos</a>
+                    </button>
+                    <button class="recordatorio__button">
+                        <a class="recordatorio__button-link" href="contacto.html">Contactame</a>
+                    </button>
+                </div>
+            </section>
+            <section class="tarjeta">
+                <div class="tarjeta__container">
+                    <img class="tarjeta__img" src="img/tarjeta-de-visita.jpg" alt="tarjetas">
+                </div>
+            </section>
+            <!-- Volver a inicio-->
+            <section>
+                <div class="volver">
+                    <div class="volver__linea"></div>
+                    <a href="#inicio" class="volver__flecha"><img src="img/icons/flecha.png" alt="volver" class="volver__flecha-imagen"></a>
+                    <div class="volver__linea"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="img/logotipo.png" alt="logotipo">
+                <p class="footer__logo-texto">Todos los derechos reservados</p>
+            </div>
+            <div class="footer__paginas">
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Inicio</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="#" class="footer__paginas-link">Sobre mí</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="index.html" class="footer__paginas-link">Servicios</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="portfolio.html" class="footer__paginas-link">Portfolio</a>
+                </li>
+                <li class="footer_item">
+                    <a href="#" class="footer__paginas-link">Contacto</a>
+                </li>
+            </div>
+            <div class="footer__contacto">
+                <p class="footer__contacto-titulo">Contacto</p>
+                <p class="footer__contacto-texto">Tlf: 648564522</p>
+                <p class="footer__contacto-texto">E-mail: 3lpiven@gmail.com</p>
+            </div>
+            <div class="footer__redes">
+                <p class="footer__redes-titulo">Redes</p>
+                <a href="https://www.instagram.com/3lpiven/"><img class="footer__redes-enlace" src="img/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/esteban-domene-blanes-1b77151a4/"><img class="footer__redes-enlace" src="img/icons/linkedin.svg" alt="Linkedin"></a>
+                <a href="#"><img class="footer__redes-enlace" src="img/icons/behance.svg" alt="Behance"></a>
+            </div>
+        </footer>
+    </body>
+</html>

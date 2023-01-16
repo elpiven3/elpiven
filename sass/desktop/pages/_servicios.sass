@@ -1,0 +1,50 @@
+
+.landing
+  height: 50vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(14, 14, 15)), url("../../../img/fondo2.jpg")
+  background-size: cover
+  background-position-y: 40%
+  filter: grayscale(.8)
+  &__titulo
+    font-family: "principal"
+    color: white
+    font-size: 3rem
+  &__texto
+    font-family: "secundaria"
+    font-size: 1.3rem
+
+.servicios
+  &__container
+    max-width: 60rem
+    margin: 0 auto
+    padding: 3rem
+  &__apartado
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__texto
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: end
+  &__titulo
+    font-family: "principal"
+    font-size: 1.7rem
+    color: #d80c1c
+  &__descripcion
+    font-family: "texto"
+    font-weight: lighter
+    font-size: 1.1rem
+    list-style: none
+    padding-left: 1rem
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    &-mayus
+      font-weight: bold
+  &__imagen
+    width: 450px

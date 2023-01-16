@@ -1,0 +1,57 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+  font-family: "principal"
+  background: #0e0e0e
+  border-bottom: 2px solid #dadada
+  .container
+    margin: 0 auto
+    padding: 1rem
+    width: 90vw
+  &--background
+    background: #000000
+  &__logo
+    width: 4.5rem
+  &__open
+    width: 3rem
+  &__close
+    width: 3rem
+    transition: 3s
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .nav
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 5rem 1fr
+      position: fixed
+      inset: 0
+      background: #ffffff
+      transform: translateX(100vw)
+      transition: .5s
+      &__ul
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 2rem
+      &__logo
+        margin: 1rem
+        width: 6rem
+      &__link
+        font-size: 1.7rem
+        text-transform: uppercase
+      &--show
+        transform: translateX(0)
+      &__container-button
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding: 1rem
+      &__container-links
+        display: flex
+        justify-content: center
+        align-items: center

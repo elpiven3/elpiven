@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Elpiven</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script src="http://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/iso-blanco.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/icons/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/icons/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="sobre-mi.html" class="nav__link">Sobre mi</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="servicios.html" class="nav__link">Servicios</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link"><img class="nav__logo" src="img/iso-rojo.png" alt="logo"></a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="portfolio.html" class="nav__link">Portfolio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacto.html" class="nav__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container" id="inicio">
+                <section class="portada">
+                    <div class="portada__imagen"><img class="portada__imagen-img" src="img/logo-horizontal.png" alt="Foto"></div>
+                    <div class="portada__logo"><img class="portada__logo-img" src="img/logo-vertical.png" alt="Logo"></div>
+                    <p class="portada__introduccion1">Hola, mi nombre es Estiven y soy un diseñador gráfico con una pasión por la creación de piezas visuales impactantes que transmiten un mensaje de manera efectiva. Tengo experiencia en diseño de logotipos, piezas publicitarias, diseño web y más. Me gusta trabajar en colaboración con mis clientes para asegurarme de que estén completamente satisfechos con el resultado final.</p>
+                    <p class="portada__introduccion2">Mi objetivo es siempre entregar un trabajo de alta calidad que refleje los valores y la personalidad de la marca. Si estás buscando un diseñador gráfico confiable y talentoso, no dudes en ponerte en contacto conmigo. Estoy deseando trabajar contigo en tu próximo proyecto.</p>
+                </section>
+                <!-- Slider main container -->
+                <section class="swiper">
+                    <h2 class="swiper-titulo">Servicios</h2>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img class="swiper-img" src="img/carousel/diseño-estatua.png" alt="diseño">
+                            <a class="swiper-button swiper-button-diseño">Diseño Gráfico</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-img" src="img/carousel/web.png" alt="web">
+                            <a class="swiper-button swiper-button-web">Diseño Web</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-img" src="img/carousel/audiovisual.png" alt="audiovisual">
+                            <a class="swiper-button swiper-button-audiovisual">Audiovisual</a>
+                        </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </section>
+                <!-- Recordatorio -->
+                <section class="contacta">
+                    <h2 class="contacta__titulo">¿Te gusta lo que ves?</h2>
+                    <button  class="contacta__button">
+                        <a href="contacto.html"  class="contacta__button-texto">¡Hablemos!</a>
+                    </button>
+                </section>
+                <!-- Mis proyectos -->
+                <section class="proyectos">
+                    <div class="proyectos__titulo">
+                        <div class="proyectos__linea"></div>
+                        <h3 class="proyectos__texto">Mis últimos proyectos</h3>
+                    </div>
+                    <div class="proyectos__galeria">
+                        <img src="img/portfolio/portfolio-1.jpg" alt="portfolio1" class="proyectos__imagen">
+                        <img src="img/portfolio/portfolio-7.jpg" alt="portfolio2" class="proyectos__imagen">
+                        <img src="img/portfolio/portfolio-2.jpg" alt="portfolio3" class="proyectos__imagen">
+                        <img src="img/portfolio/portfolio-4.jpg" alt="portfolio4" class="proyectos__imagen">
+                    </div>
+                    <div class="proyectos__subtitulo">
+                        <a class="proyectos__button" href="portfolio.html"> Ver más </a>
+                        <div class="proyectos__linea"></div>
+                    </div>
+                </section>
+                <!-- Volver a inicio-->
+                <section>
+                    <div class="volver">
+                        <div class="volver__linea"></div>
+                        <a href="#inicio" class="volver__flecha"><img src="img/icons/flecha.png" alt="volver" class="volver__flecha-imagen"></a>
+                        <div class="volver__linea"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="img/logotipo.png" alt="logotipo">
+                <p class="footer__logo-texto">Todos los derechos reservados ©</p>
+            </div>
+            <div class="footer__paginas">
+                <li class="footer__paginas-item">
+                    <a href="index.html" class="footer__paginas-link">Inicio</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="sobre-mi.html" class="footer__paginas-link">Sobre mí</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="servicios.html" class="footer__paginas-link">Servicios</a>
+                </li>
+                <li class="footer__paginas-item">
+                    <a href="portfolio.html" class="footer__paginas-link">Portfolio</a>
+                </li>
+                <li class="footer_item">
+                    <a href="contacto.html" class="footer__paginas-link">Contacto</a>
+                </li>
+            </div>
+            <div class="footer__contacto">
+                <p class="footer__contacto-titulo">Contacto</p>
+                <p class="footer__contacto-texto">Tlf: 648564522</p>
+                <p class="footer__contacto-texto">E-mail: 3lpiven@gmail.com</p>
+            </div>
+            <div class="footer__redes">
+                <p class="footer__redes-titulo">Redes</p>
+                <a href="https://www.instagram.com/3lpiven/"><img class="footer__redes-enlace" src="img/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/esteban-domene-blanes-1b77151a4/"><img class="footer__redes-enlace" src="img/icons/linkedin.svg" alt="Linkedin"></a>
+                <a href="#"><img class="footer__redes-enlace" src="img/icons/behance.svg" alt="Behance"></a>
+            </div>
+        </footer>
+    </body>
+</html>

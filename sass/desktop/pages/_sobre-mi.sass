@@ -1,0 +1,136 @@
+
+.sobremi
+  margin-top: 4rem
+  margin-bottom: 7rem
+  &__container
+    max-width: 80rem
+    margin: 0 auto
+    padding: 1rem
+    display: flex
+  &__titulo
+    padding: 0 2rem 0 0
+    margin: 0
+    font-family: "principal"
+    font-size: 5rem
+    text-align: right
+    writing-mode: vertical-lr
+    transform: rotate(180deg)
+  &__img
+    display: inline-block
+    margin: 0
+    width: 50vh
+    object-fit: cover
+    object-position: bottom
+  &__texto
+    font-family: "texto"
+    margin: 2rem
+    display: flex
+    align-items: flex-end
+
+
+.recorrido
+  max-width: 60rem
+  margin: 0 auto
+  padding: 1rem
+  &__titulo
+    display: flex
+    margin-bottom: 2rem
+    &-linea
+      width: 30%
+      box-shadow: inset 0 -2px 0 white
+    &-texto
+      font-family: "principal"
+      font-size: 2rem
+      text-align: left
+      margin: 0 2rem
+  &__texto
+    max-width: 50rem
+    margin: 0 auto
+    padding: 1rem
+    display: flex
+    justify-content: center
+    align-items: center
+    &-fecha
+      font-family: "secundaria"
+      width: 50%
+      margin-right: 2rem
+      margin-top: 0
+      text-align: right
+      font-size: 1.4rem
+      color: #D1111CFF
+    &-titulo
+      width: 50%
+      margin-left: 2rem
+      &-empresa
+        font-family: "secundaria"
+        font-size: 1.2rem
+      &-lugar
+        font-family: "texto"
+        font-size: 1rem
+        margin: 0
+
+.programas
+  max-width: 60rem
+  margin: 0 auto
+  padding: 2rem
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 1rem
+  &__titulo
+    font-family: "principal"
+    text-align: center
+    font-size: 2rem
+    margin: 3rem
+  &__item
+    display: flex
+    flex-direction: column
+    gap: 1rem
+    &-titulo
+      font-family: "secundaria"
+      text-align: center
+      color: #ffffff
+  &__iconos
+    width: 100px
+    height: 100px
+    border: none
+    border-radius: 50%
+
+.recordatorio
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 5rem
+  height: 10rem
+  background: rgb(59,59,59)
+  background: linear-gradient(138deg, rgba(59,59,59,1) 0%, rgba(14,14,15,1) 30%, rgba(125,8,15,1) 62%, rgba(14,14,15,1) 100%)
+  &__container
+    text-align: center
+    display: flex
+    justify-content: center
+    gap: 4rem
+  &__button
+    width: 20rem
+    height: 3rem
+    background: none
+    border: 3px solid white
+    border-radius: 30px
+    transform: translateZ(0)
+    transition: .5s
+    &:hover
+      transform: translateZ(1rem)
+    &-link
+      font-family: "secundaria"
+      font-size: 1.4rem
+      color: white
+      text-decoration: none
+
+.tarjeta
+  max-width: 100vw
+  &__container
+    margin: 0
+    padding: 0
+  &__img
+    height: 500px
+    object-fit: cover
